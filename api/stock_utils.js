@@ -2,7 +2,7 @@ const path = require('path');
 const XLSX = require('xlsx');
 
 function leerStockExcel(nombreArchivo) {
-    const ruta = path.join(__dirname, nombreArchivo);
+    const ruta = path.join(__dirname, 'files', nombreArchivo); // Cambiado aquí
     const workbook = XLSX.readFile(ruta);
     const sheet = workbook.Sheets[workbook.SheetNames[0]];
 
