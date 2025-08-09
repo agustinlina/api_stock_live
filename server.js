@@ -31,7 +31,7 @@ app.get('/api/stock_polo', (req, res) => {
         const productos = getStockPolo();
         res.json(productos);
     } catch (err) {
-        res.status(500).json({ error: 'No se pudo leer stock_cba.xls' });
+        res.status(500).json({ error: 'No se pudo leer stock_polo.xls' });
     }
 });
 

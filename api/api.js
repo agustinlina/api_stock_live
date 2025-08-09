@@ -33,7 +33,7 @@ function getStockCba() {
 }
 
 function getStockPolo() {
-    return leerStockExcel('polo.xls');
+    return leerStockExcel('polo.XLS');
 }
 
 module.exports = {
