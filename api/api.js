@@ -25,14 +25,19 @@ function leerStockExcel(nombreArchivo) {
 }
 
 function getStockOlav() {
-    return leerStockExcel('stock_olav.xls');
+    return leerStockExcel('olav.xls');
 }
 
 function getStockCba() {
-    return leerStockExcel('stock_cba.xls');
+    return leerStockExcel('cba.xls');
+}
+
+function getStockPolo() {
+    return leerStockExcel('polo.xls');
 }
 
 module.exports = {
     getStockOlav,
-    getStockCba
+    getStockCba,
+    getStockPolo
 };
