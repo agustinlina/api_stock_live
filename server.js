@@ -1,7 +1,7 @@
 // server.js
 const express = require('express');
 const cors = require('cors');
-const { getStockOlav, getStockCba, getStockPolo} = require('./api/api');
+const { getStockOlav, getStockCba, getStockPolo, getStockCamaras} = require('./api/api');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -34,6 +34,16 @@ app.get('/api/stock_polo', (req, res) => {
         res.status(500).json({ error: 'No se pudo leer stock_polo.xls' });
     }
 });
+
+app.get('/api/stock_camaras', (req, res) => {
+    try {
+        const productos = getStockCamaras;
+        res.json(productos);
+    } catch (err) {
+        res.status(500).json({ error: 'No se pudo leer stock_camaras.xls' });
+    }
+});
+
 
 app.get('/', (req, res) => {
     res.send('API de Stock funcionando.');

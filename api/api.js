@@ -36,8 +36,13 @@ function getStockPolo() {
     return leerStockExcel('polo.xls');
 }
 
+function getStockCamaras() {
+    return leerStockExcel('camaras.xls');
+}
+
 module.exports = {
     getStockOlav,
     getStockCba,
-    getStockPolo
+    getStockPolo,
+    getStockCamaras
 };
