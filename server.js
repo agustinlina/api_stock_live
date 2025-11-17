@@ -35,15 +35,6 @@ app.get('/api/stock_polo', (req, res) => {
     }
 });
 
-app.get('/api/stock_camaras', (req, res) => {
-    try {
-        const productos = getStockCamaras;
-        res.json(productos);
-    } catch (err) {
-        res.status(500).json({ error: 'No se pudo leer stock_camaras.xls' });
-    }
-});
-
 
 app.get('/', (req, res) => {
     res.send('API de Stock funcionando.');
