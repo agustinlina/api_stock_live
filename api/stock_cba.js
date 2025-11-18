@@ -19,6 +19,6 @@ export default function handler (req, res) {
 
     res.status(200).json(productos)
   } catch (error) {
-    res.status(500).json({ error: 'No se pudo leer cba.XLS ni cba.xls.' })
+    res.status(500).json({ error: 'No se pudo leer cba.XLS o cba.xls.' })
   }
 }

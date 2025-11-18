@@ -6,11 +6,11 @@ export default function handler (req, res) {
 
     try {
       // Primero intenta con mayúsculas
-      productos = leerStockExcel('olav.XLS')
+      productos = leerStockExcel('camaras.XLS')
     } catch (errorMayus) {
       // Si falla, intenta con minúsculas
       try {
-        productos = leerStockExcel('olav.xls')
+        productos = leerStockExcel('camaras.xls')
       } catch (errorMinus) {
         // Si también falla, lanzo el error para que lo agarre el catch externo
         throw errorMinus
@@ -19,6 +19,6 @@ export default function handler (req, res) {
 
     res.status(200).json(productos)
   } catch (error) {
-    res.status(500).json({ error: 'No se pudo leer olav.XLS ni olav.xls.' })
+    res.status(500).json({ error: 'No se pudo leer camaras.XLS o camaras.xls.' })
   }
 }
